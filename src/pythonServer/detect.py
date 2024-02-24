@@ -260,9 +260,15 @@ if __name__ == "__main__":
             # Stream results
             im0 = annotator.result()
             if rd:
+                updateFile(os.path.split(os.path.realpath(
+                    sys.argv[0]))[0] + "/reading.txt", "rdnt", "reading")
+                print("reading")
                 cv2.putText(im0, "reading", (200, 200),
                             cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 6)
             else:
+                updateFile(os.path.split(os.path.realpath(
+                    sys.argv[0]))[0] + "/reading.txt", "reading", "rdnt")
+                print("Notreading")
                 cv2.putText(im0, "not reading", (200, 200),
                             cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 6)
             if view_img:

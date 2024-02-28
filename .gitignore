@@ -5,4 +5,8 @@ node_modules
 # 启动文件
 start.sh
 # Mac端的特性
+*/.DS_Store
 .DS_Store
+
+# 缓存
+src/pythonServer/runs

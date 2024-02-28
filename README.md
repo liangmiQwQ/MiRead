@@ -16,3 +16,15 @@
 ```bash
 sh install.sh
 ```
+
+然后可以使用以下命令启动
+
+```bash
+pnpm start
+```
+
+或者使用
+
+```bash
+sh start.sh
+```

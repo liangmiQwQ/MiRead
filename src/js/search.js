@@ -5,12 +5,12 @@ function search() {
     bookList = JSON.parse(bookList.toString());
     //写一个查询算法
     var book = bookList[0];
-    console.log(book)
+    console.log(book);
 
     var i = 0;
-    while (/*要true里面才能执行*/book.finishi) {
+    while (/*要true里面才能执行*/ book.finishi) {
         book = bookList[i];
-        i++
+        i++;
     }
     return book;
 }

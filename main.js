@@ -13,7 +13,7 @@ const findermenu = [
     },
 ];
 const menu = Menu.buildFromTemplate(findermenu);
-// Menu.setApplicationMenu(menu);
+Menu.setApplicationMenu(menu);
 //通过将数组菜单设置为空数组，让顶部的finder菜单消失
 
 function createWindow() {
@@ -22,6 +22,7 @@ function createWindow() {
         width: 800,
         fullscreen: true,
         // frame: true,
+        frame: false,
         //通过全屏选项和框架的消失，让用户无法关闭这个窗口
         webPreferences: {
             nodeIntegration: true,

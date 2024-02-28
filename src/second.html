@@ -47,7 +47,7 @@
             <div class="text">
                 <span class="title">[[[timer]]]</span>
                 <br />
-                <!-- <span class="subtitle">[[[subtitle]]]</span> -->
+                <span class="subtitle">[[[subtitle]]]</span>
             </div>
         </div>
         <audio
@@ -66,12 +66,14 @@
                 console.log(e);
                 console.log(s);
             });
-            // child.exec("python3 " + __dirname + "/pythonServer/detect.py", (e, s) => {
-            // console.log(e);
-            // console.log(s);
-            // });
+            child.exec("python3 " + __dirname + "/pythonServer/detect.py", (e, s) => {
+                console.log(e);
+                console.log(s);
+            });
             md.init();
-            var i = 1800;
+            // let i = 1800;
+            let i = 1;
+            // let i = 40;
             md.inner({
                 timer: s_to_hs(i),
                 subtitle: "如果检测到人离开，将会暂停",

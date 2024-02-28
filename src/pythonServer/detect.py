@@ -142,7 +142,7 @@ if __name__ == "__main__":
     save_txt = False  # 保存文本结果
     save_conf = False  # save confidences in --save-txt labels
     save_crop = False  # 将识别到的物体抠出来保存图片
-    nosave = False  # True 什么结果都不保存
+    nosave = True  # True 什么结果都不保存
 
     agnostic_nms = False  # class-agnostic NMS
     augment = False  # augmented inference
@@ -272,7 +272,7 @@ if __name__ == "__main__":
                 cv2.putText(im0, "not reading", (200, 200),
                             cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 6)
             if view_img:
-                cv2.imshow(str(p), im0)
+                # cv2.imshow(str(p), im0)
                 cv2.waitKey(1)  # 1 millisecond
 
             # Save results (image with detections)

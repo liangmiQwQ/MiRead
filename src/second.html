@@ -62,17 +62,26 @@
         <script src="./js/readTxT.js"></script>
         <script>
             const child = require("child_process");
+            // const p
+            let { PythonShell } = require("python-shell");
+
             child.exec("bash '" + __dirname + "/second.sh'", (e, s) => {
                 console.log(e);
                 console.log(s);
             });
-            child.exec("python3 " + __dirname + "/pythonServer/detect.py", (e, s) => {
-                console.log(e);
-                console.log(s);
+            // child.exec("python3 " + __dirname + "/pythonServer/detect.py", (e, s) => {
+            // console.log(e);
+            // console.log(s);
+            // });
+            // 打开AI摄像头
+            PythonShell.run(__dirname + "/pythonServer/detect.py", null).then(message => {
+                // console.log(message);
+                console.log("finished");
             });
+
             md.init();
-            // let i = 1800;
-            let i = 1;
+            let i = 1800;
+            // let i = 1;
             // let i = 40;
             md.inner({
                 timer: s_to_hs(i),

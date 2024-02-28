@@ -6,12 +6,13 @@
     "scripts": {
         "test": "electron .",
         "start": "electron .",
-        "package": "npx electron-packager . 阅读记录 --platform=darwin --electron-version=10.0.0 --arch=x64 --download.mirrorOptions.mirror=https://npm.taobao.org/mirrors/electron/ --app-version=0.0.0 --build-version=0.0.0 --out=HelloWorld --overwrite --no-package-manager --ignore='(.git)'o"
+        "build:all": "electron-builder -mwl --config electron-builder.json"
     },
     "author": "liangmi",
     "license": "Apache-2.0",
     "devDependencies": {
-        "electron": "^27.0.0"
+        "electron": "^27.3.3",
+        "electron-builder": "^24.12.0"
     },
     "dependencies": {
         "moment": "^2.30.1",

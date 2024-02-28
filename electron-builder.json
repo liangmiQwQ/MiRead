@@ -1,0 +1,28 @@
+{
+    "asar": true,
+    "appId": "cn.lmfans.miread.app",
+    "files": ["dist-electron", "dist"],
+    "mac": {
+        "artifactName": "rntimer_${version}.${ext}",
+        "target": ["dmg", "zip"]
+    },
+    "win": {
+        "target": [
+            {
+                "target": "nsis",
+                "arch": ["x64"]
+            }
+        ],
+        "artifactName": "rntimer_${version}.${ext}"
+    },
+    "nsis": {
+        "oneClick": false,
+        "perMachine": false,
+        "allowToChangeInstallationDirectory": true,
+        "deleteAppDataOnUninstall": false
+    },
+    "directories": {
+        "output": "release/${version}",
+        "buildResources": "build"
+    }
+}

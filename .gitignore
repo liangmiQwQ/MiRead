@@ -10,3 +10,6 @@ start.sh
 
 # 缓存
 src/pythonServer/runs
+
+# 打包
+release
